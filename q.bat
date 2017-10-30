@@ -4,7 +4,7 @@
 ::  大类分为top、A公司
 ::  输入为空时更新key文本
 ::  找不到对应的界面时, 会根据当前输入key和key文本进行字符串相似度比较, 提供建议
-set guessKeyFile=lib\qKey.txt
+set guessKeyFile=qKey.txt
 if "%1"=="" (
     (for /f "tokens=1-4 delims== " %%i in (%~f0) do if "%%i %%j %%k"=="if /i %%1" echo %%l)>%guessKeyFile%	
     exit
@@ -49,7 +49,7 @@ start "" tool_guessKey.bat "%~1" "%guessKeyFile%" %0
 exit
 
 :404
-mode 30,7& title go& call lib\load.bat _parseShowBlockNum2
+mode 30,7& title go& call load.bat _parseShowBlockNum2
 set numStr=404& set numStrPrefix=  
 echo.
 (%_call% ("numStr numStrPrefix") %_parseShowBlockNum2%)
