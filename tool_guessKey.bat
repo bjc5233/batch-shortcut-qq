@@ -1,4 +1,4 @@
-@echo off& call lib\load.bat _parseASCIIStr _strlen2 _getLF& call lib\loadE.bat CurS& call lib\loadJ.bat StrDistanceFile& setlocal enabledelayedexpansion
+@echo off& call load.bat _parseASCIIStr _strlen2 _getLF& call loadE.bat CurS& call loadJ.bat StrDistanceFile& setlocal enabledelayedexpansion
 %CurS% /crv 0
 ::判断当前输入与哪个key相似度最高, 并快速打开
 ::    %1: key
